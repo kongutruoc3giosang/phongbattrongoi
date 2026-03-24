@@ -12,26 +12,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Chakra+Petch:wght@400;600;700&family=DM+Sans:wght@400;500;600&display=swap&font-display=swap" rel="stylesheet">
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"EntertainmentBusiness",
-  "name":"Wonder Arena",
-  "description":"Khu giải trí live-action trong nhà tại Quận 10 TP.HCM — 5 trò chơi công nghệ cao, hệ thống lên cấp nhóm, ảnh AI tự động. Active Play · Real Connection.",
-  "url":"https://wonderarena.vn",
-  "telephone":"+84901234567",
-  "address":{"@type":"PostalAddress","streetAddress":"","addressLocality":"Quận 10","addressRegion":"TP. Hồ Chí Minh","addressCountry":"VN"},
-  "geo":{"@type":"GeoCoordinates","latitude":10.7727,"longitude":106.6678},
-  "openingHoursSpecification":[
-    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday"],"opens":"15:00","closes":"22:00"},
-    {"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday","Sunday"],"opens":"10:00","closes":"23:00"}
-  ],
-  "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"180","bestRating":"5"},
-  "priceRange":"150.000₫–449.000₫",
-  "image":"https://wonderarena.vn/hero-poster.jpg",
-  "sameAs":["https://facebook.com/WonderArenaVN","https://www.tiktok.com/@WonderArenaVN"]
-}
-</script>
 <style>
 /* ===== TOKENS ===== */
 :root{
@@ -50,7 +30,6 @@ html{scroll-behavior:smooth;scroll-padding-top:70px}
 body{-webkit-text-size-adjust:100%;text-size-adjust:100%;background:var(--c0);color:var(--wht);font-family:'DM Sans',sans-serif;overflow-x:hidden}
 a{text-decoration:none;color:inherit}
 button{cursor:pointer;font-family:inherit}
-input,select,textarea{font-family:inherit}
 ::-webkit-scrollbar{width:3px}
 ::-webkit-scrollbar-track{background:var(--c1)}
 ::-webkit-scrollbar-thumb{background:var(--cyan2);border-radius:2px}
@@ -71,7 +50,6 @@ input,select,textarea{font-family:inherit}
 .btn-sm{font-size:11px;padding:9px 20px;letter-spacing:1.5px}
 .btn-lg{font-size:15px;padding:17px 44px}
 .btn-full{width:100%;justify-content:center}
-.btn:disabled{opacity:.38;pointer-events:none}
 
 /* ===== NAVBAR ===== */
 #nav{position:fixed;top:0;left:0;right:0;z-index:200;height:62px;
@@ -96,32 +74,8 @@ input,select,textarea{font-family:inherit}
   padding:7px 14px;border-radius:100px;font-family:'Chakra Petch',sans-serif;
   font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
   color:var(--cyan);cursor:pointer;transition:background var(--r)}
-.wait-pill:hover{background:rgba(0,245,212,.12)}
 .live-dot{width:6px;height:6px;border-radius:50%;background:var(--grn);animation:lpulse 1.4s ease infinite}
 @keyframes lpulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.5)}}
-.ham-btn{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:6px;cursor:pointer}
-.ham-line{width:22px;height:2px;background:var(--wht);border-radius:1px;transition:all .3s}
-.ham-btn.open .ham-line:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
-.ham-btn.open .ham-line:nth-child(2){opacity:0;transform:scaleX(0)}
-.ham-btn.open .ham-line:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
-.mobile-menu{display:none;position:fixed;top:62px;left:0;right:0;z-index:199;
-  background:rgba(7,6,22,.98);backdrop-filter:blur(20px);
-  border-bottom:1px solid rgba(0,245,212,.1);padding:20px 24px;flex-direction:column}
-.mobile-menu.open{display:flex}
-.mobile-menu a{font-family:'Chakra Petch',sans-serif;font-size:13px;font-weight:700;
-  letter-spacing:2px;text-transform:uppercase;color:var(--g1);
-  padding:14px 0;border-bottom:1px solid var(--brd);display:block;transition:color var(--r)}
-.mobile-menu a:last-child{border-bottom:none}
-.mobile-menu a:hover{color:var(--cyan)}
-
-/* ===== TICKER ===== */
-.ticker{margin-top:62px;background:var(--mag);overflow:hidden;padding:10px 0;white-space:nowrap}
-.ticker-track{display:inline-flex;animation:tsroll 24s linear infinite}
-.ticker-track span{font-family:'Chakra Petch',sans-serif;font-weight:700;
-  font-size:12px;letter-spacing:3px;text-transform:uppercase;
-  color:rgba(255,255,255,.9);padding:0 32px}
-.ticker-track span::after{content:'✦';margin-left:26px;opacity:.4}
-@keyframes tsroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
 /* ===== HERO ===== */
 .hero{
@@ -137,27 +91,12 @@ input,select,textarea{font-family:inherit}
   background-image:linear-gradient(rgba(0,245,212,.03) 1px,transparent 1px),
     linear-gradient(90deg,rgba(0,245,212,.03) 1px,transparent 1px);
   background-size:56px 56px}
-.hg{position:absolute;border-radius:50%;pointer-events:none}
-.hg1{width:600px;height:600px;background:radial-gradient(circle,rgba(0,245,212,.08) 0%,transparent 65%);top:50%;left:10%;transform:translate(-50%,-50%)}
-.hg2{width:400px;height:400px;background:radial-gradient(circle,rgba(240,0,184,.06) 0%,transparent 65%);top:60%;left:35%;transform:translate(-50%,-50%)}
 
-/* ── Hero LEFT ── */
 .hero-left{
   display:flex;flex-direction:column;justify-content:center;
   padding:clamp(88px,9vh,124px) clamp(32px,4vw,64px) clamp(48px,6vh,80px);
-  position:relative;z-index:2;min-height:100vh;gap:0;
+  position:relative;z-index:2;min-height:100vh;
 }
-.hero-left-top{display:flex;flex-direction:column;gap:0}
-
-/* Eyebrow — two-row layout: brand chip + location tag */
-.hero-eye-wrap{display:flex;flex-direction:column;gap:8px;margin-bottom:28px;animation:fu .5s .05s both}
-.hero-brand-tag{display:inline-flex;align-items:center;gap:8px}
-.hero-brand-dot{width:6px;height:6px;border-radius:50%;background:var(--cyan);flex-shrink:0}
-.hero-brand-nm{font-family:'Chakra Petch',sans-serif;font-size:11px;font-weight:700;
-  letter-spacing:3px;text-transform:uppercase;color:var(--cyan)}
-.hero-loc{font-family:'Chakra Petch',sans-serif;font-size:10px;font-weight:600;
-  letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.35);
-  padding-left:14px}
 
 .hero-h1{font-family:'Anton',sans-serif;font-size:clamp(44px,6vw,92px);line-height:1.05;
   text-transform:uppercase;margin-bottom:0;animation:fu .8s .1s cubic-bezier(0.2, 0.8, 0.2, 1) both;
@@ -165,7 +104,6 @@ input,select,textarea{font-family:inherit}
 .hero-h1 span{display:block;padding-bottom:2px}
 .hero-h1 .c{color:var(--cyan)}.hero-h1 .m{color:var(--mag)}.hero-h1 .y{color:var(--yel)}
 
-/* Thin accent bar between H1 and desc */
 .hero-divider{width:48px;height:3px;background:linear-gradient(90deg,var(--cyan),var(--mag));
   margin:20px 0 20px;animation:fu .5s .28s both;flex-shrink:0}
 
@@ -175,7 +113,6 @@ input,select,textarea{font-family:inherit}
 
 .hero-cta{display:flex;gap:12px;flex-wrap:wrap;animation:fu .6s .42s both;margin-bottom:40px}
 
-/* Stats — horizontal rule above, evenly spaced */
 .hero-stats-wrap{animation:fu .5s .55s both}
 .hero-stats-rule{height:1px;background:rgba(255,255,255,.08);margin-bottom:22px}
 .hero-stats{display:flex;gap:0}
@@ -185,26 +122,14 @@ input,select,textarea{font-family:inherit}
 .stat-l{font-family:'Chakra Petch',sans-serif;font-size:8.5px;letter-spacing:2px;
   text-transform:uppercase;color:rgba(255,255,255,.35);margin-top:2px;line-height:1.3}
 
-/* Social icons — horizontal, small, below stats */
-.hero-social{display:flex;align-items:center;gap:10px;margin-top:20px;animation:fu .5s .62s both}
-.hero-social a{
-  width:30px;height:30px;border:1px solid rgba(255,255,255,.12);
-  display:flex;align-items:center;justify-content:center;
-  color:rgba(255,255,255,.3);font-size:12px;transition:all var(--r);flex-shrink:0;
-  text-decoration:none;font-family:'Chakra Petch',sans-serif;font-weight:700}
-.hero-social a:hover{border-color:var(--cyan);color:var(--cyan)}
 @keyframes fu{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
 
-.reveal{opacity:0;transform:translateY(30px);transition:all .8s cubic-bezier(0.2, 0.8, 0.2, 1)}
-.reveal.active{opacity:1;transform:translateY(0)}
-
-/* ── Hero RIGHT — video frame box (TOCA style) ── */
+/* ── Hero RIGHT — video frame box ── */
 .hero-right{
   position:relative;z-index:2;
   display:flex;align-items:center;justify-content:center;
   padding:clamp(30px,4vh,56px) clamp(24px,3vw,48px) clamp(30px,4vh,56px) 0;
 }
-/* The video container — hard rectangular frame like TOCA */
 .hero-video-frame{
   position:relative;
   width:100%;height:100%;
@@ -214,66 +139,24 @@ input,select,textarea{font-family:inherit}
   transform:translateZ(0);
   box-shadow: -20px 0 50px rgba(0,0,0,0.5);
 }
-/* Subtle corner accents */
 .hero-video-frame::before,.hero-video-frame::after{
   content:'';position:absolute;width:28px;height:28px;z-index:3;pointer-events:none}
 .hero-video-frame::before{top:0;left:0;border-top:2px solid var(--cyan);border-left:2px solid var(--cyan)}
 .hero-video-frame::after{bottom:0;right:0;border-bottom:2px solid var(--mag);border-right:2px solid var(--mag)}
-/* ═══════════════════════════════════════════════════════
-   VIDEO / IMAGE BÊN TRONG FRAME
-   Tất cả media được đặt tại đây
-═══════════════════════════════════════════════════════ */
+
 .hero-media{position:absolute;inset:0;overflow:hidden}
 .hero-media video{
   width:100%;height:100%;
   object-fit:cover;
   object-position:center center;
   display:block}
-.hero-media img{
-  width:100%;height:100%;
-  object-fit:cover;
-  object-position:center center;
-  display:block}
-/* Gradient blend vào nền bên trái */
 .hero-media::after{
   content:'';position:absolute;inset:0;pointer-events:none;
   background:linear-gradient(to right,var(--c0) 0%,transparent 20%),
              linear-gradient(to top,var(--c0) 0%,transparent 40%)}
-/* Placeholder khi chưa có media — đặt trong .hero-video-frame */
-.hero-video-frame video,.hero-video-frame img{
-  position:absolute;inset:0;width:100%;height:100%;
-  object-fit:cover;object-position:center;display:block}
-.gc{aspect-ratio:1;border:1px solid rgba(255,255,255,.06);position:relative;overflow:hidden;
-  cursor:pointer;transition:border-color .3s,transform .3s;display:flex;align-items:flex-end}
-.gc:hover{border-color:var(--cyan);transform:scale(1.02)}
-.gc-bg{position:absolute;inset:0;transition:transform .4s}
-.gc:hover .gc-bg{transform:scale(1.08)}
-/* Game grid backgrounds — replaced by real images when available */
-.gc1 .gc-bg{background:linear-gradient(145deg,#001c14,#003828 60%,#00f5d4)}
-.gc2 .gc-bg{background:linear-gradient(145deg,#1a001a,#4a006a 60%,#f000b8)}
-.gc3 .gc-bg{background:linear-gradient(145deg,#18090a,#5c2000 60%,#ff6b1a)}
-.gc4 .gc-bg{background:linear-gradient(145deg,#17140a,#504000 60%,#ffe135)}
-.gc5 .gc-bg{background:linear-gradient(145deg,#0a0020,#280060 60%,#7c3aed)}
-.gc6 .gc-bg{background:linear-gradient(145deg,#001218,#004050 60%,#22d3ee)}
-.gc-em{position:absolute;top:50%;left:50%;transform:translate(-50%,-62%);
-  font-size:44px;opacity:.3;transition:opacity .3s,transform .3s;pointer-events:none}
-.gc:hover .gc-em{opacity:.55;transform:translate(-50%,-56%) scale(1.1)}
-.gc-info{position:relative;z-index:1;padding:10px 12px;width:100%;background:linear-gradient(to top,rgba(7,6,22,.96),transparent)}
-.gc-name{font-family:'Chakra Petch',sans-serif;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--wht);display:block;margin-bottom:3px}
-.pip-row{display:flex;gap:2px}
-.pip{width:7px;height:7px;border-radius:1px}
-.pip-on{background:var(--cyan)}.pip-off{background:rgba(255,255,255,.1)}
 
-/* ===== PROOF STRIP ===== */
-.proof-strip{background:var(--c2);border-top:1px solid var(--brd);border-bottom:1px solid var(--brd);
-  padding:20px 56px;display:flex;align-items:center;justify-content:space-around;gap:16px;flex-wrap:wrap}
-.pi{display:flex;align-items:center;gap:12px}
-.pi-ico{font-size:24px}
-.pi-val{font-family:'Anton',sans-serif;font-size:22px;color:var(--cyan);line-height:1}
-.pi-lbl{font-family:'Chakra Petch',sans-serif;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--g1);margin-top:2px}
-.pi-sep{width:1px;height:36px;background:var(--brd)}
-
-/* ===== SECTION CHROME ===== */
+/* ===== SECTIONS ===== */
+section{padding:100px 56px}
 .eyebrow{font-family:'Chakra Petch',sans-serif;font-size:10px;font-weight:700;
   letter-spacing:4px;text-transform:uppercase;color:var(--mag);
   display:flex;align-items:center;gap:10px;margin-bottom:14px}
@@ -281,478 +164,160 @@ input,select,textarea{font-family:inherit}
 .sh2{font-family:'Anton',sans-serif;font-size:clamp(34px,4.5vw,58px);text-transform:uppercase;line-height:1.1;letter-spacing:-0.3px}
 .sh2 .hi{color:var(--cyan)}
 
-/* ===== WAIT TRACKER ===== */
-section[id]{scroll-margin-top:70px}
-#s-wait{background:var(--c1);padding:80px 56px}
-.wait-hd{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:40px}
-.wait-ref{font-family:'Chakra Petch',sans-serif;font-size:10px;letter-spacing:1.5px;color:var(--g1);display:flex;align-items:center;gap:6px}
-.rdot{width:5px;height:5px;border-radius:50%;background:var(--grn);animation:lpulse 2s ease infinite}
-.wait-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:2px}
-.wc{background:var(--c2);border:1px solid var(--brd);padding:clamp(16px,2vw,24px) clamp(14px,1.5vw,22px);position:relative;transition:border-color var(--r)}
-.wc:hover{border-color:rgba(0,245,212,.25)}
+/* ===== WAIT GRID ===== */
+.wait-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:2px;margin-top:40px}
+.wc{background:var(--c2);border:1px solid var(--brd);padding:24px;position:relative}
 .wc-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
 .wc-em{font-size:28px}
-.badge{font-family:'Chakra Petch',sans-serif;font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:4px 10px;border-radius:100px}
-.b-open{background:rgba(34,197,94,.15);color:var(--grn)}
-.b-busy{background:rgba(255,225,53,.1);color:var(--yel)}
-.b-full{background:rgba(240,0,184,.1);color:var(--mag)}
+.badge{font-family:'Chakra Petch',sans-serif;font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:4px 10px;border-radius:100px;background:rgba(34,197,94,.15);color:var(--grn)}
 .wc-name{font-family:'Anton',sans-serif;font-size:20px;text-transform:uppercase;margin-bottom:5px}
 .wc-t{font-family:'Chakra Petch',sans-serif;font-size:11px;color:var(--g1);margin-bottom:8px}
-.wc-t strong{color:var(--wht)}
-.wc-urgency{font-family:'Chakra Petch',sans-serif;font-size:9px;color:var(--yel);
-  letter-spacing:1px;margin-bottom:12px;display:none}
-.wc-urgency.show{display:block}
 .bar-bg{height:3px;background:rgba(255,255,255,.07);border-radius:2px}
-.bar-fill{height:100%;border-radius:2px;background:var(--cyan);transition:width 1.2s ease}
-.bar-y{background:var(--yel)}.bar-r{background:var(--mag)}
-.wc-cta{display:inline-flex;align-items:center;gap:5px;margin-top:12px;
-  font-family:'Chakra Petch',sans-serif;font-size:9px;font-weight:700;
-  letter-spacing:1.5px;text-transform:uppercase;color:var(--cyan);
-  cursor:pointer;background:none;border:none;padding:0;transition:opacity var(--r)}
-.wc-cta:hover{opacity:.7}
+.bar-fill{height:100%;border-radius:2px;background:var(--cyan);width:20%}
 
-/* ===== GAMES ===== */
-#s-games{background:var(--c0);padding:100px 56px}
-.games-hd{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:50px}
-.games-grid{display:grid;grid-template-columns:repeat(6,1fr);grid-template-rows:clamp(320px,28vw,480px) clamp(220px,19vw,340px);gap:3px}
-.gcard{position:relative;overflow:hidden;cursor:pointer;border:1px solid transparent;transition:border-color .3s;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+/* ===== GAMES GRID ===== */
+.games-grid{display:grid;grid-template-columns:repeat(6,1fr);grid-template-rows:repeat(2,400px);gap:3px;margin-top:40px}
+.gcard{position:relative;overflow:hidden;border:1px solid transparent;transition:border-color .3s}
 .gcard:nth-child(1){grid-column:1/3}
 .gcard:nth-child(2){grid-column:3/5}
 .gcard:nth-child(3){grid-column:5/7}
 .gcard:nth-child(4){grid-column:1/4}
 .gcard:nth-child(5){grid-column:4/7}
-.gcard:hover{border-color:rgba(0,245,212,.2)}
-.gbg{position:absolute;inset:0;transition:transform .5s ease}
-.gcard:hover .gbg{transform:scale(1.04)}
-/* Game backgrounds — replaced by real images */
-.gb1{background:linear-gradient(155deg,#001c14,#003828 50%,#00c88a)}
-.gb2{background:linear-gradient(155deg,#1a0018,#5a0070 50%,#f000b8)}
-.gb3{background:linear-gradient(155deg,#1a0800,#5c2a00 50%,#ff6b1a)}
-.gb4{background:linear-gradient(155deg,#181200,#504200 50%,#ffe135)}
-.gb5{background:linear-gradient(155deg,#0a001c,#280060 50%,#8b5cf6)}
-.gb6{background:linear-gradient(155deg,#001218,#004252 50%,#22d3ee)}
-/* Image inside game card */
-.gbg img{width:100%;height:100%;object-fit:cover;opacity:.85;transition:opacity .3s}
-.gbg img[src=""]{opacity:0}
-.gcard:hover .gbg img{opacity:1}
-/* Hide broken img icon for empty src in gc and pfm */
-img[src=""]{color:transparent;font-size:0}
-.gcard-em{position:absolute;top:48%;left:50%;transform:translate(-50%,-60%);
-  font-size:clamp(48px,5vw,80px);opacity:.22;pointer-events:none;transition:opacity .4s,transform .4s}
-.gcard:hover .gcard-em{opacity:.45;transform:translate(-50%,-55%) scale(1.08)}
-.gov{position:absolute;bottom:0;left:0;right:0;padding:clamp(16px,2vw,28px) clamp(14px,1.5vw,22px) clamp(14px,1.5vw,24px);
-  background:linear-gradient(to top,rgba(7,6,22,.97) 60%,transparent)}
+.gbg{position:absolute;inset:0;background:linear-gradient(155deg,#001c14,#003828 50%,#00c88a)}
+.gov{position:absolute;bottom:0;left:0;right:0;padding:28px;background:linear-gradient(to top,rgba(7,6,22,.97) 60%,transparent)}
 .gnum{font-family:'Chakra Petch',sans-serif;font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--mag);margin-bottom:5px}
-.gtitle{font-family:'Anton',sans-serif;font-size:clamp(18px,2vw,28px);text-transform:uppercase;line-height:1.02;margin-bottom:6px}
-.gdesc{font-size:clamp(11px,1vw,13px);color:var(--g1);line-height:1.55;margin-bottom:8px}
-.gdiff{display:flex;align-items:center;gap:8px;font-family:'Chakra Petch',sans-serif;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--g1)}
-.gtags{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
-.gtag{font-family:'Chakra Petch',sans-serif;font-size:8px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:3px 8px;border-radius:2px}
-.tc{background:rgba(0,245,212,.1);color:var(--cyan)}
-.tm{background:rgba(240,0,184,.1);color:var(--mag)}
-.ty{background:rgba(255,225,53,.1);color:var(--yel)}
+.gtitle{font-family:'Anton',sans-serif;font-size:24px;text-transform:uppercase;line-height:1.02;margin-bottom:6px}
+.gdesc{font-size:13px;color:var(--g1);line-height:1.55}
 
-/* ===== PRICING TABLE ===== */
-#s-pricing{background:var(--c1);padding:100px 56px}
-.pricing-intro{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:50px}
-.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
-.pcard{background:var(--c2);border:1px solid var(--brd);padding:36px 30px;-webkit-tap-highlight-color:transparent;
-  position:relative;overflow:hidden;transition:border-color var(--r),transform var(--r);cursor:default}
-.pcard:hover{border-color:rgba(0,245,212,.25);transform:translateY(-3px)}
+/* ===== PRICING ===== */
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:40px}
+.pcard{background:var(--c2);border:1px solid var(--brd);padding:36px 30px;position:relative}
 .pcard.featured{border-color:var(--cyan);background:linear-gradient(160deg,rgba(0,245,212,.06) 0%,var(--c2) 60%)}
-.pcard-badge{position:absolute;top:-1px;right:-1px;
-  background:var(--cyan);color:var(--c0);
-  font-family:'Chakra Petch',sans-serif;font-size:9px;font-weight:700;
-  letter-spacing:1.5px;text-transform:uppercase;padding:5px 14px}
-.pcard-ico{font-size:36px;margin-bottom:16px}
+.pcard-badge{position:absolute;top:-1px;right:-1px;background:var(--cyan);color:var(--c0);font-family:'Chakra Petch',sans-serif;font-size:9px;font-weight:700;padding:5px 14px}
 .pcard-nm{font-family:'Anton',sans-serif;font-size:32px;text-transform:uppercase;margin-bottom:4px}
-.pcard-for{font-family:'Chakra Petch',sans-serif;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--cyan);margin-bottom:22px}
-.pcard-price{font-family:'Anton',sans-serif;font-size:52px;color:var(--wht);line-height:1;margin-bottom:4px}
-.pcard-price sub{font-family:'Chakra Petch',sans-serif;font-size:13px;font-weight:700;color:var(--g1);vertical-align:top;margin-top:12px;display:inline-block}
-.pcard-per{font-size:13px;color:var(--g1);margin-bottom:24px}
+.pcard-price{font-family:'Anton',sans-serif;font-size:52px;color:var(--wht);line-height:1;margin-bottom:20px}
 .pcard-feats{list-style:none;margin-bottom:28px;border-top:1px solid var(--brd);padding-top:20px}
-.pcard-feats li{font-size:13px;color:rgba(255,255,255,.65);padding:8px 0;
-  border-bottom:1px solid var(--brd);display:flex;align-items:center;gap:10px}
-.pcard-feats li::before{content:'✦';color:var(--cyan);font-size:9px;flex-shrink:0}
-.pcard-feats li.hi{color:var(--wht);font-weight:600}
-.pcard-feats li.muted{color:rgba(255,255,255,.25)}
-.pcard-feats li.muted::before{color:rgba(255,255,255,.15)}
+.pcard-feats li{font-size:13px;color:rgba(255,255,255,.65);padding:8px 0;border-bottom:1px solid var(--brd);display:flex;align-items:center;gap:10px}
+.pcard-feats li::before{content:'✦';color:var(--cyan);font-size:9px}
 
-/* ===== HOW IT WORKS ===== */
-
-/* ===== LEVEL SYSTEM ===== */
-#s-lvl{background:var(--c1);padding:100px 56px}
-.lvl-layout{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;margin-top:48px}
-.lvl-txt p{font-size:15px;line-height:1.8;color:var(--g1);margin-bottom:14px}
-.lvl-txt p strong{color:var(--wht)}
-.lvl-cta{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
-/* XP Simulator */
-.xp-sim{background:var(--c2);border:1px solid rgba(0,245,212,.2);padding:24px;margin-top:32px}
-.xp-sim-title{font-family:'Chakra Petch',sans-serif;font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--cyan);margin-bottom:18px;display:flex;align-items:center;gap:8px}
-.xp-sim-title::before{content:'⚡';font-size:14px}
-.xp-input-row{display:flex;align-items:center;gap:12px;margin-bottom:18px}
-.xp-input-row label{font-size:13px;color:var(--g1);white-space:nowrap}
-.xp-slider{flex:1;-webkit-appearance:none;appearance:none;height:4px;background:var(--brd);border-radius:2px;outline:none}
-.xp-slider::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:var(--cyan);cursor:pointer;transition:box-shadow var(--r)}
-.xp-slider::-webkit-slider-thumb:hover{box-shadow:0 0 12px rgba(0,245,212,.5)}
-.xp-slider-val{font-family:'Anton',sans-serif;font-size:24px;color:var(--cyan);min-width:36px;text-align:center}
-.xp-result{background:var(--c0);padding:16px;border:1px solid var(--brd)}
-.xp-level-display{display:flex;align-items:center;gap:14px;margin-bottom:14px}
-.xp-badge-big{font-size:40px}
-.xp-level-name{font-family:'Anton',sans-serif;font-size:26px;text-transform:uppercase;color:var(--wht)}
-.xp-level-sub{font-family:'Chakra Petch',sans-serif;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--cyan);margin-top:3px}
-.xp-bar-wrap{margin-bottom:10px}
-.xp-bar-lbl{display:flex;justify-content:space-between;font-family:'Chakra Petch',sans-serif;font-size:9px;color:var(--g1);margin-bottom:5px}
-.xp-bar-bg{height:6px;background:rgba(255,255,255,.08);border-radius:3px}
-.xp-bar-fill{height:100%;border-radius:3px;background:linear-gradient(90deg,var(--cyan),var(--mag));transition:width .6s ease}
-.xp-perks{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
-.xpk{font-family:'Chakra Petch',sans-serif;font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:3px 8px;border-radius:2px}
-.xpk-c{background:rgba(0,245,212,.1);color:var(--cyan)}
-.xpk-m{background:rgba(240,0,184,.1);color:var(--mag)}
-.xpk-y{background:rgba(255,225,53,.1);color:var(--yel)}
-.xpk-l{background:rgba(255,255,255,.05);color:var(--g1)}
-.xp-nightmare{background:rgba(240,0,184,.08);border:1px solid rgba(240,0,184,.2);padding:10px 12px;margin-top:12px;display:none}
-.xp-nightmare.show{display:block}
-.xp-nightmare-t{font-family:'Chakra Petch',sans-serif;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--mag);margin-bottom:4px}
-.xp-nightmare p{font-size:12px;color:rgba(255,255,255,.6);line-height:1.6}
-/* Level rows */
-.lvl-rows{display:flex;flex-direction:column;gap:2px}
-.lvl-row{display:flex;align-items:center;gap:14px;padding:16px 18px;border:1px solid var(--brd);transition:border-color var(--r),background var(--r);position:relative}
-.lvl-row:hover{background:rgba(255,255,255,.02);border-color:rgba(0,245,212,.2)}
-.lvl-row.cur{border-color:var(--cyan);background:rgba(0,245,212,.05)}
-.lvl-row.cur::before{content:'HIỆN TẠI';position:absolute;top:-1px;right:10px;background:var(--cyan);color:var(--c0);font-family:'Chakra Petch',sans-serif;font-size:8px;font-weight:700;letter-spacing:1.5px;padding:3px 8px}
-.lvl-row.lck{opacity:.65}
-.lvl-badge{width:46px;height:46px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:22px;border:2px solid var(--brd);border-radius:4px}
-.lvl-row.cur .lvl-badge{border-color:var(--cyan)}
-.lvl-info{flex:1;min-width:0}
-.lvl-nm{font-family:'Anton',sans-serif;font-size:18px;text-transform:uppercase;margin-bottom:3px}
-.lvl-xp{font-family:'Chakra Petch',sans-serif;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--g1);margin-bottom:5px}
-.lvl-perks{display:flex;gap:5px;flex-wrap:wrap}
-.pk{font-family:'Chakra Petch',sans-serif;font-size:8px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:3px 7px;border-radius:2px}
-.pk-c{background:rgba(0,245,212,.1);color:var(--cyan)}
-.pk-m{background:rgba(240,0,184,.1);color:var(--mag)}
-.pk-y{background:rgba(255,225,53,.1);color:var(--yel)}
-
-/* ===== MEDIA QUERIES ===== */
-@media(max-width:1280px){
-  .hero-h1{font-size:clamp(38px,5.5vw,74px)}
-  .hero-left{padding:88px 36px 60px}
-  #s-wait,#s-games,#s-pricing,#s-lvl,#s-ev,#s-faq,#s-app,.reviews-strip,.pre-footer-strip,footer{padding-left:40px;padding-right:40px}
-  .proof-strip{padding:20px 40px}
-}
-
-@media(max-width:960px){
+/* ===== RESPONSIVE ===== */
+@media(max-width:1024px){
+  #nav{padding:0 24px}
+  .nav-links{display:none}
   .hero{grid-template-columns:1fr;min-height:auto}
-  .hero-left{min-height:auto;padding:60px 24px 48px;justify-content:flex-start; order: 1}
+  .hero-left{min-height:auto;padding:60px 24px 48px; order: 1}
   .hero-right{min-height:60vh;padding:0; order: 0}
   .hero-video-frame{width:100%;height:100%;min-height:60vh; border: none; box-shadow: none}
-  .hero-h1{font-size:clamp(36px,9vw,56px)}
   .wait-grid{grid-template-columns:repeat(3,1fr)}
-  .pricing-grid{grid-template-columns:repeat(3,1fr)}
-  .lvl-layout{grid-template-columns:1fr;gap:36px}
-}
-
-@media(max-width:768px){
+  .games-grid{grid-template-columns:repeat(2,1fr);grid-template-rows:repeat(3,300px)}
+  .gcard:nth-child(n){grid-column:auto}
   .pricing-grid{grid-template-columns:1fr}
+  section{padding:60px 24px}
 }
-
 @media(max-width:600px){
   .wait-grid{grid-template-columns:1fr 1fr}
-  .games-grid{grid-template-columns:1fr;grid-template-rows:none}
-  .gcard{grid-column:auto !important; grid-row:auto !important; aspect-ratio:3/4}
-  .hero-cta{flex-direction:column}
-  .hero-cta .btn{width:100%;justify-content:center}
+  .games-grid{grid-template-columns:1fr;grid-template-rows:auto}
+  .gcard{height:350px}
 }
 </style>
 </head>
 <body>
 
-<!-- Navbar -->
 <nav id="nav">
   <a href="#" class="nav-logo">WONDER<span>⚡</span>ARENA</a>
   <ul class="nav-links">
     <li><a href="#s-wait">Trạng Thái</a></li>
     <li><a href="#s-games">Trò Chơi</a></li>
     <li><a href="#s-pricing">Bảng Giá</a></li>
-    <li><a href="#s-lvl">Cấp Độ</a></li>
-    <li><a href="#s-ev">Sự Kiện</a></li>
-    <li><a href="#s-app">Ứng Dụng</a></li>
-    <li><a href="#s-faq">Hỏi Đáp</a></li>
   </ul>
   <div class="nav-right">
-    <div class="wait-pill" id="nav-wait-pill" onclick="location.href='#s-wait'">
+    <div class="wait-pill">
       <span class="live-dot"></span>
-      <span id="nav-wait">Vào ngay!</span>
+      <span>Vào ngay!</span>
     </div>
-    <button class="btn btn-mg btn-sm" onclick="openModal()">Đặt Chỗ Ngay</button>
+    <button class="btn btn-mg btn-sm" onclick="openModal()">Đặt Chỗ</button>
   </div>
 </nav>
 
-<!-- Ticker -->
-<div class="ticker">
-  <div class="ticker-track">
-    <span>Axe Throwing</span><span>Laser Maze</span><span>Twister Zone</span><span>LED Jump Game</span><span>Interactive Wall</span><span>Cả Nhóm Cùng Chơi</span><span>Không Ai Ngồi Chờ</span><span>Chơi Thật · Kết Nối Thật · Kỷ Niệm Thật</span>
-    <span>Axe Throwing</span><span>Laser Maze</span><span>Twister Zone</span><span>LED Jump Game</span><span>Interactive Wall</span><span>Cả Nhóm Cùng Chơi</span><span>Không Ai Ngồi Chờ</span><span>Chơi Thật · Kết Nối Thật · Kỷ Niệm Thật</span>
-  </div>
-</div>
-
-<!-- Hero Section -->
 <section class="hero">
   <div class="hero-grid"></div>
-  <div class="hg hg1"></div>
-  <div class="hg hg2"></div>
-
   <div class="hero-left">
-    <div class="hero-left-top">
-      <div class="hero-eye-wrap">
-        <div class="hero-brand-tag">
-          <div class="hero-brand-dot"></div>
-          <div class="hero-brand-nm">Wonder Arena</div>
-        </div>
-        <div class="hero-loc">Không chỉ là gặp nhau mà là cùng nhau trải nghiệm</div>
-      </div>
-
-      <h1 class="hero-h1">
-        <span class="c">CHƠI CÙNG NHAU</span>
-        <span class="m">LÊN CẤP</span>
-        <span class="y">CÙNG NHAU</span>
-      </h1>
-
-      <div class="hero-divider"></div>
-
-      <p class="hero-desc">
-        Ngồi cùng nhau, nhưng mỗi người một màn hình.<br>
-        <strong>Wonder Arena</strong> nghĩ mọi thứ có thể vui hơn thế.
-      </p>
-
-      <div class="hero-cta">
-        <button class="btn btn-cy btn-lg" onclick="openModal()">Đặt Chỗ Ngay</button>
-        <a href="#s-games" class="btn btn-gh btn-lg">Xem Trò Chơi</a>
-      </div>
-
-      <div class="hero-stats-wrap">
-        <div class="hero-stats-rule"></div>
-        <div class="hero-stats">
-          <div class="hero-stat">
-            <div class="stat-n">★4.9</div>
-            <div class="stat-l">180+ Đánh Giá</div>
-          </div>
-          <div class="hero-stat">
-            <div class="stat-n">5</div>
-            <div class="stat-l">Trò Chơi Độc Quyền</div>
-          </div>
-          <div class="hero-stat">
-            <div class="stat-n">∞</div>
-            <div class="stat-l">Người / Nhóm</div>
-          </div>
-        </div>
-      </div>
+    <h1 class="hero-h1">
+      <span class="c">CHƠI CÙNG NHAU</span>
+      <span class="m">LÊN CẤP</span>
+      <span class="y">CÙNG NHAU</span>
+    </h1>
+    <div class="hero-divider"></div>
+    <p class="hero-desc">
+      Ngồi cùng nhau, nhưng mỗi người một màn hình.<br>
+      <strong>Wonder Arena</strong> nghĩ mọi thứ có thể vui hơn thế.
+    </p>
+    <div class="hero-cta">
+      <button class="btn btn-cy btn-lg" onclick="openModal()">Đặt Chỗ Ngay</button>
+      <a href="#s-games" class="btn btn-gh btn-lg">Xem Trò Chơi</a>
     </div>
-
-    <div class="hero-social">
-      <a href="#" aria-label="Facebook">FB</a>
-      <a href="#" aria-label="Instagram">IG</a>
-      <a href="#" aria-label="TikTok">TK</a>
-      <a href="#" aria-label="YouTube">YT</a>
+    <div class="hero-stats-wrap">
+      <div class="hero-stats-rule"></div>
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="stat-n">★4.9</div><div class="stat-l">Đánh Giá</div></div>
+        <div class="hero-stat"><div class="stat-n">5</div><div class="stat-l">Trò Chơi</div></div>
+        <div class="hero-stat"><div class="stat-n">∞</div><div class="stat-l">Người / Nhóm</div></div>
+      </div>
     </div>
   </div>
-
   <div class="hero-right">
     <div class="hero-video-frame">
       <div class="hero-media">
         <video id="hero-vid" autoplay muted loop playsinline poster="hero-poster.webp">
           <source src="hero-axe-opt.mp4" type="video/mp4">
         </video>
-        <div class="hero-media-overlay"></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Proof Strip -->
-<div class="proof-strip reveal">
-  <div class="pi"><div class="pi-ico">🎮</div><div><div class="pi-val">5</div><div class="pi-lbl">Trò Chơi Độc Quyền</div></div></div>
-  <div class="pi-sep"></div>
-  <div class="pi"><div class="pi-ico">⭐</div><div><div class="pi-val">4.9</div><div class="pi-lbl">Đánh Giá Google</div></div></div>
-  <div class="pi-sep"></div>
-  <div class="pi"><div class="pi-ico">🙅</div><div><div class="pi-val">0</div><div class="pi-lbl">Giới Hạn Nhóm</div></div></div>
-  <div class="pi-sep"></div>
-  <div class="pi"><div class="pi-ico">⚡</div><div><div class="pi-val">&lt;5'</div><div class="pi-lbl">Điểm Danh RFID</div></div></div>
-</div>
-
-<!-- Wait Tracker -->
-<section id="s-wait" class="reveal">
-  <div class="wait-hd">
-    <div>
-      <div class="eyebrow">Trạng Thái Hôm Nay</div>
-      <h2 class="sh2">TÌNH TRẠNG<br><span class="hi">SÂN CHƠI HÔM NAY</span></h2>
-    </div>
-    <div class="wait-ref">
-      <div class="rdot"></div>
-      <span>Cập nhật liên tục · <span id="last-upd">vừa xong</span></span>
-    </div>
+<section id="s-wait">
+  <div class="eyebrow">Trạng Thái</div>
+  <h2 class="sh2">TÌNH TRẠNG<br><span class="hi">SÂN CHƠI HÔM NAY</span></h2>
+  <div class="wait-grid">
+    <div class="wc"><div class="wc-top">🪓<span class="badge">Ít người</span></div><div class="wc-name">Axe Throwing</div><div class="wc-t">~5 phút</div><div class="bar-bg"><div class="bar-fill"></div></div></div>
+    <div class="wc"><div class="wc-top">🔴<span class="badge">Ít người</span></div><div class="wc-name">Laser Maze</div><div class="wc-t">~2 phút</div><div class="bar-bg"><div class="bar-fill"></div></div></div>
+    <div class="wc"><div class="wc-top">🌀<span class="badge">Ít người</span></div><div class="wc-name">Twister Zone</div><div class="wc-t">~8 phút</div><div class="bar-bg"><div class="bar-fill"></div></div></div>
+    <div class="wc"><div class="wc-top">⚡<span class="badge">Ít người</span></div><div class="wc-name">LED Jump</div><div class="wc-t">~0 phút</div><div class="bar-bg"><div class="bar-fill"></div></div></div>
+    <div class="wc"><div class="wc-top">🖐️<span class="badge">Ít người</span></div><div class="wc-name">Interactive</div><div class="wc-t">~4 phút</div><div class="bar-bg"><div class="bar-fill"></div></div></div>
   </div>
-  <div id="wait-grid" class="wait-grid"></div>
 </section>
 
-<!-- Games Section -->
-<section id="s-games" class="reveal">
-  <div class="games-hd">
-    <div>
-      <div class="eyebrow">Cả Nhóm Cùng Chơi</div>
-      <h2 class="sh2">5 TRÒ CHƠI<br><span class="hi">CÔNG NGHỆ CAO</span></h2>
-    </div>
-    <button class="btn btn-oc btn-sm" onclick="openModal()">Đặt Chỗ Ngay →</button>
-  </div>
+<section id="s-games">
+  <div class="eyebrow">5 Trò Chơi</div>
+  <h2 class="sh2">CÔNG NGHỆ CAO<br><span class="hi">TRẢI NGHIỆM THẬT</span></h2>
   <div class="games-grid">
-    <div class="gcard gc1">
-      <div class="gbg gb1"></div>
-      <div class="gov">
-        <div class="gnum">01</div>
-        <div class="gtitle">AXE THROWING</div>
-        <div class="gdesc">Cầm rìu thật, ném thật. Camera AI ghi điểm tự động.</div>
-      </div>
-    </div>
-    <div class="gcard gc2">
-      <div class="gbg gb2"></div>
-      <div class="gov">
-        <div class="gnum">02</div>
-        <div class="gtitle">LASER MAZE</div>
-        <div class="gdesc">Vượt qua mê cung laser mà không chạm tia.</div>
-      </div>
-    </div>
-    <div class="gcard gc3">
-      <div class="gbg gb3"></div>
-      <div class="gov">
-        <div class="gnum">03</div>
-        <div class="gtitle">TWISTER ZONE</div>
-        <div class="gdesc">Giữ thăng bằng trên các ô màu theo lệnh AI.</div>
-      </div>
-    </div>
-    <div class="gcard gc4">
-      <div class="gbg gb4"></div>
-      <div class="gov">
-        <div class="gnum">04</div>
-        <div class="gtitle">LED JUMP GAME</div>
-        <div class="gdesc">Nhảy vào ô xanh, tránh ô đỏ. Nhạc cực bốc.</div>
-      </div>
-    </div>
-    <div class="gcard gc5">
-      <div class="gbg gb5"></div>
-      <div class="gov">
-        <div class="gnum">05</div>
-        <div class="gtitle">INTERACTIVE WALL</div>
-        <div class="gdesc">Tương tác toàn thân với bức tường khổng lồ.</div>
-      </div>
-    </div>
+    <div class="gcard"><div class="gbg"></div><div class="gov"><div class="gnum">01</div><div class="gtitle">AXE THROWING</div><div class="gdesc">Ném rìu thật, ghi điểm AI.</div></div></div>
+    <div class="gcard"><div class="gbg" style="background:linear-gradient(155deg,#1a0018,#5a0070 50%,#f000b8)"></div><div class="gov"><div class="gnum">02</div><div class="gtitle">LASER MAZE</div><div class="gdesc">Mê cung laser đầy kịch tính.</div></div></div>
+    <div class="gcard"><div class="gbg" style="background:linear-gradient(155deg,#1a0800,#5c2a00 50%,#ff6b1a)"></div><div class="gov"><div class="gnum">03</div><div class="gtitle">TWISTER ZONE</div><div class="gdesc">Thử thách thăng bằng.</div></div></div>
+    <div class="gcard"><div class="gbg" style="background:linear-gradient(155deg,#181200,#504200 50%,#ffe135)"></div><div class="gov"><div class="gnum">04</div><div class="gtitle">LED JUMP GAME</div><div class="gdesc">Nhảy theo điệu nhạc.</div></div></div>
+    <div class="gcard"><div class="gbg" style="background:linear-gradient(155deg,#0a001c,#280060 50%,#8b5cf6)"></div><div class="gov"><div class="gnum">05</div><div class="gtitle">INTERACTIVE WALL</div><div class="gdesc">Tương tác bức tường khổng lồ.</div></div></div>
   </div>
 </section>
 
-<!-- Pricing Section -->
-<section id="s-pricing" class="reveal">
-  <div class="pricing-intro">
-    <div>
-      <div class="eyebrow">Bảng Giá</div>
-      <h2 class="sh2">GIÁ RÕ RÀNG<br><span class="hi">KHÔNG PHÍ ẨN</span></h2>
-    </div>
-  </div>
+<section id="s-pricing">
+  <div class="eyebrow">Bảng Giá</div>
+  <h2 class="sh2">GIÁ RÕ RÀNG<br><span class="hi">KHÔNG PHÍ ẨN</span></h2>
   <div class="pricing-grid">
-    <div class="pcard">
-      <div class="pcard-nm">1 GIỜ</div>
-      <div class="pcard-price">199K</div>
-      <ul class="pcard-feats">
-        <li>Trải nghiệm toàn bộ game</li>
-        <li>Điều phối viên hỗ trợ</li>
-      </ul>
-      <button class="btn btn-gh btn-full" onclick="openModal()">Chọn Gói</button>
-    </div>
-    <div class="pcard featured">
-      <div class="pcard-badge">HOT</div>
-      <div class="pcard-nm">2 GIỜ</div>
-      <div class="pcard-price">349K</div>
-      <ul class="pcard-feats">
-        <li>Vui chơi thoải mái hơn</li>
-        <li>XP x1.5 lên cấp nhanh</li>
-      </ul>
-      <button class="btn btn-cy btn-full" onclick="openModal()">Chọn Gói</button>
-    </div>
-    <div class="pcard">
-      <div class="pcard-nm">CẢ NGÀY</div>
-      <div class="pcard-price">449K</div>
-      <ul class="pcard-feats">
-        <li>Khu vực riêng tư</li>
-        <li>XP x2 tối đa</li>
-      </ul>
-      <button class="btn btn-gh btn-full" onclick="openModal()">Chọn Gói</button>
-    </div>
+    <div class="pcard"><div class="pcard-nm">1 GIỜ</div><div class="pcard-price">199K</div><ul class="pcard-feats"><li>Tất cả trò chơi</li><li>Hỗ trợ 24/7</li></ul><button class="btn btn-gh btn-full" onclick="openModal()">Chọn</button></div>
+    <div class="pcard featured"><div class="pcard-badge">HOT</div><div class="pcard-nm">2 GIỜ</div><div class="pcard-price">349K</div><ul class="pcard-feats"><li>Vui chơi thoải mái</li><li>XP x1.5</li></ul><button class="btn btn-cy btn-full" onclick="openModal()">Chọn</button></div>
+    <div class="pcard"><div class="pcard-nm">CẢ NGÀY</div><div class="pcard-price">449K</div><ul class="pcard-feats"><li>Riêng tư cho nhóm</li><li>XP x2 tối đa</li></ul><button class="btn btn-gh btn-full" onclick="openModal()">Chọn</button></div>
   </div>
 </section>
 
 <script>
-const $ = id => document.getElementById(id);
-
-/* ===== DATA ===== */
-const GAMES = [
-  {name:'Axe Throwing', em:'🪓', wait:0, max:20, st:'open'},
-  {name:'Laser Maze', em:'🔴', wait:0, max:20, st:'open'},
-  {name:'Twister Zone', em:'🌀', wait:0, max:20, st:'open'},
-  {name:'LED Jump Game', em:'⚡', wait:0, max:25, st:'open'},
-  {name:'Interactive Wall', em:'🖐️', wait:0, max:20, st:'open'},
-];
-
-function initWaits() {
-  GAMES.forEach(g => {
-    g.wait = Math.floor(Math.random() * 15);
-    g.st = g.wait > 10 ? 'busy' : 'open';
-  });
-  renderWait();
-}
-
-function renderWait() {
-  const grid = $('wait-grid');
-  if(!grid) return;
-  grid.innerHTML = GAMES.map(g => `
-    <div class="wc">
-      <div class="wc-top">
-        <div class="wc-em">${g.em}</div>
-        <span class="badge b-${g.st}">${g.st === 'open' ? 'Ít người' : 'Vừa phải'}</span>
-      </div>
-      <div class="wc-name">${g.name}</div>
-      <div class="wc-t">Chờ khoảng <strong>~${g.wait} phút</strong></div>
-      <div class="bar-bg"><div class="bar-fill" style="width:${(g.wait/g.max)*100}%"></div></div>
-    </div>
-  `).join('');
-}
-
-function openModal() {
-  alert('Hệ thống đặt chỗ đang được bảo trì. Vui lòng quay lại sau!');
-}
-
-/* ===== REVEAL ON SCROLL ===== */
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('active');
-    }
-  });
-}, { threshold: 0.1 });
-
-document.querySelectorAll('.reveal').forEach(r => observer.observe(r));
-
-/* ===== INIT ===== */
+function openModal() { alert("Hệ thống đặt chỗ đang bảo trì. Vui lòng liên hệ hotline!"); }
 window.addEventListener('load', () => {
-  initWaits();
-});
-
-/* ===== HERO VIDEO SMOOTH LOOP ===== */
-(function(){
-  const v = $('hero-vid');
-  if(!v) return;
-  v.play().catch(() => {
-    const resume = () => { v.play(); document.removeEventListener('touchstart', resume); };
-    document.addEventListener('touchstart', resume, {once:true});
+  const v = document.getElementById('hero-vid');
+  if(v) v.play().catch(() => {
+    document.addEventListener('touchstart', () => v.play(), {once:true});
   });
-})();
+});
 </script>
 
 </body>
