@@ -42,7 +42,7 @@
   --grn:#22c55e;--red:#ef4444;
   --wht:#ffffff;
   --g1:rgba(255,255,255,.45);--g2:rgba(255,255,255,.12);
-  --brd:rgba(255,255,255,.07);--r:.25s ease;
+  --brd:rgba(255,255,255,.07);--r:.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:70px}
@@ -61,7 +61,7 @@ input,select,textarea{font-family:inherit}
   letter-spacing:2px;text-transform:uppercase;padding:13px 28px;
   border:none;transition:all var(--r);white-space:nowrap;line-height:1}
 .btn-cy{background:var(--cyan);color:var(--c0);clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,8px 100%,0 calc(100% - 8px))}
-.btn-cy:hover{background:#00ffdf;box-shadow:0 0 24px rgba(0,245,212,.4);transform:translateY(-1px)}
+.btn-cy:hover{background:#00ffdf;box-shadow:0 0 30px rgba(0,245,212,.6);transform:translateY(-3px)}
 .btn-mg{background:var(--mag);color:var(--wht);clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,8px 100%,0 calc(100% - 8px))}
 .btn-mg:hover{background:var(--mag2);box-shadow:0 0 24px rgba(240,0,184,.4);transform:translateY(-1px)}
 .btn-gh{background:transparent;color:var(--wht);border:1.5px solid rgba(255,255,255,.2)}
@@ -127,10 +127,11 @@ input,select,textarea{font-family:inherit}
 .hero{
   min-height:100vh;
   display:grid;
-  grid-template-columns:1fr 1.45fr;
+  grid-template-columns:1.1fr 1.35fr;
   position:relative;
   overflow:hidden;
   padding:0;
+  background: radial-gradient(circle at 20% 50%, rgba(0, 245, 212, 0.05) 0%, transparent 50%);
 }
 .hero-grid{position:absolute;inset:0;pointer-events:none;
   background-image:linear-gradient(rgba(0,245,212,.03) 1px,transparent 1px),
@@ -158,9 +159,9 @@ input,select,textarea{font-family:inherit}
   letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.35);
   padding-left:14px}
 
-.hero-h1{font-family:'Anton',sans-serif;font-size:clamp(40px,5vw,82px);line-height:1.12;
-  text-transform:uppercase;margin-bottom:0;animation:fu .7s .15s both;
-  letter-spacing:-0.5px}
+.hero-h1{font-family:'Anton',sans-serif;font-size:clamp(44px,6vw,92px);line-height:1.05;
+  text-transform:uppercase;margin-bottom:0;animation:fu .8s .1s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  letter-spacing:-1px; text-shadow: 0 10px 30px rgba(0,0,0,0.5);}
 .hero-h1 span{display:block;padding-bottom:2px}
 .hero-h1 .c{color:var(--cyan)}.hero-h1 .m{color:var(--mag)}.hero-h1 .y{color:var(--yel)}
 
@@ -205,9 +206,10 @@ input,select,textarea{font-family:inherit}
   position:relative;
   width:100%;height:100%;
   overflow:hidden;
-  border:2px solid rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.1);
   contain:layout style;
   transform:translateZ(0);
+  box-shadow: -20px 0 50px rgba(0,0,0,0.5);
 }
 /* Subtle corner accents */
 .hero-video-frame::before,.hero-video-frame::after{
@@ -230,10 +232,10 @@ input,select,textarea{font-family:inherit}
   object-position:center center;
   display:block}
 /* Gradient blend vào nền bên trái */
-.hero-media::after{
+  .hero-media::after{
   content:'';position:absolute;inset:0;pointer-events:none;
   background:linear-gradient(to right,var(--c0) 0%,transparent 20%),
-             linear-gradient(to top,rgba(7,6,22,.35) 0%,transparent 40%)}
+             linear-gradient(to top,var(--c0) 0%,transparent 40%)}
 /* Placeholder khi chưa có media — đặt trong .hero-video-frame */
 .hero-video-frame video,.hero-video-frame img{
   position:absolute;inset:0;width:100%;height:100%;
@@ -690,9 +692,9 @@ footer{background:#040310;padding:64px 56px 28px;border-top:2px solid var(--cyan
 /* ── 960px: tablet portrait / landscape mobile ── */
 @media(max-width:960px){
   .hero{grid-template-columns:1fr;min-height:auto}
-  .hero-left{min-height:auto;padding:80px 24px 36px;justify-content:flex-start}
-  .hero-right{min-height:56vw;padding:0}
-  .hero-video-frame{width:100%;height:100%;min-height:56vw}
+  .hero-left{min-height:auto;padding:60px 24px 48px;justify-content:flex-start; order: 1}
+  .hero-right{min-height:60vh;padding:0; order: 0}
+  .hero-video-frame{width:100%;height:100%;min-height:60vh; border: none; box-shadow: none}
   .hero-media-fallback{display:none}
   .hero-h1{font-size:clamp(36px,9vw,56px)}
   .hero-divider{margin:16px 0 16px}
@@ -1080,7 +1082,7 @@ input[type="date"].finput{color-scheme:dark;min-height:42px}
 </section>
 
 <!-- ── PROOF STRIP ── -->
-<div class="proof-strip rev">
+<div class="proof-strip reveal">
   <div class="pi"><div class="pi-ico">🎮</div><div><div class="pi-val">5</div><div class="pi-lbl">Trò Chơi Độc Quyền</div></div></div>
   <div class="pi-sep"></div>
   <div class="pi"><div class="pi-ico">⭐</div><div><div class="pi-val">4.9</div><div class="pi-lbl">Đánh Giá Google</div></div></div>
@@ -1093,7 +1095,7 @@ input[type="date"].finput{color-scheme:dark;min-height:42px}
 </div>
 
 <!-- ── LIVE WAIT TRACKER ── -->
-<section id="s-wait">
+<section id="s-wait" class="reveal">
   <div class="wait-hd">
     <div>
       <div class="eyebrow">Trạng Thái Hôm Nay</div>
@@ -1131,7 +1133,7 @@ input[type="date"].finput{color-scheme:dark;min-height:42px}
 </section>
 
 <!-- ── GAMES ── -->
-<section id="s-games">
+<section id="s-games" class="reveal">
   <div class="games-hd rev">
     <div>
       <div class="eyebrow">Cả Nhóm Cùng Chơi — Không Ai Ngồi Chờ</div>
@@ -1235,7 +1237,7 @@ input[type="date"].finput{color-scheme:dark;min-height:42px}
 </div>
 
 <!-- ── PRICING TABLE ── -->
-<section id="s-pricing">
+<section id="s-pricing" class="reveal">
   <div class="pricing-intro rev">
     <div>
       <div class="eyebrow">Bảng Giá</div>
@@ -3175,13 +3177,24 @@ window.addEventListener('load',()=>{
   });
   // Smooth loop: seek to 0.1s before end to prevent black frame flash
   // Smooth loop: use ended event (not timeupdate) to avoid CPU drain
-  v.addEventListener('ended',()=>{v.currentTime=0;v.play().catch(()=>{});});
-  // Resume if tab becomes visible again
-  document.addEventListener('visibilitychange',()=>{
-    if(!document.hidden&&v.paused)v.play().catch(()=>{});
-  });
-})();
-/* ===== MOBILE STICKY CTA SCROLL BEHAVIOR ===== */
+  v.addEventListener('ended',()=>{v.currentTime=0;v.play().catch(()=>{});})	  // Resume if tab becomes visible again
+	  document.addEventListener('visibilitychange',()=>{
+	    if(!document.hidden&&v.paused)v.play().catch(()=>{});
+	  });
+	})();
+	/* ===== REVEAL ON SCROLL ===== */
+	(function(){
+	  const reveals = document.querySelectorAll('.reveal');
+	  const observer = new IntersectionObserver((entries) => {
+	    entries.forEach(entry => {
+	      if (entry.isIntersecting) {
+	        entry.target.classList.add('active');
+	        observer.unobserve(entry.target);
+	      }
+	    });
+	  }, { threshold: 0.1 });
+	  reveals.forEach(r => observer.observe(r));
+	})();ICKY CTA SCROLL BEHAVIOR ===== */
 (function(){
   let lastY=0,ticking=false;
   const bar=document.getElementById('mobile-sticky-cta');
